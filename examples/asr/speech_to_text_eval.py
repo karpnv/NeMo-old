@@ -164,8 +164,6 @@ def main(cfg: EvaluationConfig):
             raise ValueError(f"Got {metric_name} of {metric_value}, which was higher than tolerance={cfg.tolerance}")
 
         logging.info(f'Got {metric_name} of {metric_value}. Tolerance was {cfg.tolerance}')
-    else:
-        logging.info(f'Got {metric_name} of {metric_value}')
 
     logging.info(f'Dataset WER/CER ' + str(round(100 * wer, 2)) + "%/" + str(round(100 * cer, 2)) + "%")
 
